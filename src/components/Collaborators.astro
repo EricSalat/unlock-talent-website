@@ -3,24 +3,19 @@ const { image, alt } = Astro.props
 ---
 
 <div>
-    <!-- <img src={image}> -->
     <img src=`/public/img/logos/${image}.png` alt={alt}>
 </div>
 
 <style>
     div {
         background-color: var(--azulContenedorBorde);
-        width: 152px;
+        width: 150px;
         height: 61px;
         border: 2px solid var(--azulContenedor);
         border-radius: 10px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        /* background-image: url("/public/img/logos/logo-netflix.png");
-        background-size: cover; 
-        background-position: center; */
-        
+        align-items: center;   
     }
 
     #collaborators {
@@ -30,6 +25,7 @@ const { image, alt } = Astro.props
     img {
         max-width: 100%;
         max-height: 100%;
+        padding: 0 20px;
     }
    
 </style>

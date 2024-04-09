@@ -10,8 +10,16 @@ import Collaborators from "./Collaborators.astro"
         </h1>
         <p>Checkr powers the fastest, fairest background checks for businesses of all sizes, it’s time to change the way you hire.</p>
         <div id="buttons-div">
-            <Button content="Run a background check"></Button>
-            <Button content="Contact sales"></Button>
+            <Button 
+                content="Run a background check"
+                width="260px"
+                >
+            </Button>
+            <Button 
+                content="Contact sales"
+                width="160px"
+                backgroundColor="var(--rosaPrincipal)">
+            </Button>
         </div>
         <div id="collaborators">
             <Collaborators image="logo-netflix" alt="Netflix" />
@@ -35,7 +43,7 @@ import Collaborators from "./Collaborators.astro"
 		font-weight: 700;
 		line-height: 1;
 		text-align: left;
-		margin-bottom: 1em;
+		margin: 1em 0;
 		font-size: 64px;
 	}
 
@@ -56,12 +64,9 @@ import Collaborators from "./Collaborators.astro"
 	}
 
     #buttons-div {
-        padding: 50px 0;
+        display:flex;
         gap: 32px;
-    }
-
-    #buttons-div button {
-        padding-right: 32px;
+        padding: 50px 0;
     }
 
     #collaborators {
