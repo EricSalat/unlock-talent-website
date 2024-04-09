@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import Section1 from "./Section1.astro"
+
+
+---
+
+<Layout title="Welcome to Astro.">
+	<Header />
+	<main>
+		<Hero/>
+		<Section1 />
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		/* margin: auto; */
+		/* padding: 1rem; */
+		/* width: 1200px; */
+		
+		height: 100vh;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		background-color: aquamarine;
+		font-family: var(--mainFont);
+	}
+	
+	
+	
+</style>

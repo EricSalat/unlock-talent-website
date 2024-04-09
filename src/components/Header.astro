@@ -1,0 +1,55 @@
+---
+import Button from '../components/Button.astro'
+---
+
+<header>
+    <nav>
+        <p>Logo</p>
+        <ul>
+            <li>Products</li>
+            <li>Use Cases</li>
+            <li>Developers</li>
+            <li>Resources</li>
+            <li>Resources</li>
+            <li>Resources</li>
+        </ul>
+
+        <Button content="Start For Free"/>
+    </nav>
+</header>
+
+<style>
+    header {
+        background-color: brown;
+        font-family: var(--mainFont);
+        font-weight: bold;
+        font-size: 14px;
+        height: 115px;
+        align-content: center;
+        padding: 0 50px;
+        
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+
+    ul li {
+        /* margin: 0 20px; */
+    }
+
+    ul li:last-of-type {
+        /* margin-right: 0; */
+    }
+</style>

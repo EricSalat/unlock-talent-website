@@ -1,0 +1,73 @@
+---
+import Button from "./Button.astro"
+import Collaborators from "./Collaborators.astro"
+---
+
+<section id="hero">
+    <div id="text-part">
+        <h1>
+            Unlock talent.<br> Unlock opportunity.
+        </h1>
+        <p>Checkr powers the fastest, fairest background checks for businesses of all sizes, it’s time to change the way you hire.</p>
+        <div id="buttons-div">
+            <Button content="Run a background check"></Button>
+            <Button content="Contact sales"></Button>
+        </div>
+        <div id="collaborators">
+            <Collaborators image="logo-netflix" alt="Netflix" />
+            <Collaborators image="logo-uber" alt="Uber" />
+            <Collaborators image="logo-globant" alt="Globant" />
+            <Collaborators image="logo-glovo" alt="Glovo" />
+            <Collaborators image="logo-wallapop" alt="Wallapop" />
+            <Collaborators image="logo-accenture" alt="Accenture" />
+            
+        </div>
+    </div>
+    <div id="image-part">
+        <!-- <img src="/public/hero-1.png" alt=""> -->
+    </div>
+
+</section>
+
+<style>
+    h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+		font-size: 64px;
+	}
+
+	#hero {
+		display: flex;
+
+	}
+
+	#text-part {
+		width: 60%;
+		position: relative;
+	}
+
+	#image-part {
+		position: absolute;
+		right:0;
+
+	}
+
+    #buttons-div {
+        padding: 50px 0;
+        gap: 32px;
+    }
+
+    #buttons-div button {
+        padding-right: 32px;
+    }
+
+    #collaborators {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: fit-content;
+    }
+</style>
