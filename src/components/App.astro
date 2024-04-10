@@ -10,10 +10,7 @@ import MobileMenu from './Mobile/MobileMenu.astro';
 ---
 
 <Layout title="Checkr">
-	<div id="mobile-menu">
-		<MobileMenu/>
-	</div>
-	<Header id="header" />
+	<Header />
 	<main>
 		<Hero/>
 		<Section1 />
@@ -36,24 +33,9 @@ import MobileMenu from './Mobile/MobileMenu.astro';
 		font-family: var(--mainFont);
 	}
 
-	#mobile-menu {
-		display: none;
-	}
+	
 </style>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburgerIcon = document.querySelector(".hamburger-menu");
-        const crossIcon = document.querySelector("#cross-icon");
-        const mobileMenu = document.querySelector("#mobile-menu") as HTMLElement;
 
-        hamburgerIcon.addEventListener("click", toggleMobileMenu);
-        crossIcon.addEventListener("click", toggleMobileMenu);
-
-        function toggleMobileMenu() {
-            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
-        }
-    });
-</script>
 
 
