@@ -1,0 +1,67 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+    <div class="layout">
+        <div class="text">
+            <h2>Upgrade your hiring workflow</h2>
+            <p>Checkr's AI-powered technology helps you reduce time, human error and bias form manual reviews. Our award winning adjudication toolsa make your hiring process more efficient.</p>
+            <Button
+            content="Learn More"
+            width="160px"
+            backgroundColor="var(--rosaPrincipal)"
+            />
+        </div>
+        <div class="image">
+                <img src="/img/laptop.png"/>
+        </div>
+    </div>
+    
+</section>
+
+<style>
+    section {
+        padding: 50px 100px;
+        background-color: var(--azulFuerte);
+        display: flex;
+        flex-direction: row;
+        border: solid 3px #000;
+        border-top: none;
+
+    }
+
+    p {
+        padding-bottom: 50px;
+    }
+    
+    div.image{
+        width: 60%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        /* height: fit-content; */
+    }
+    div.text{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: left;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    @media (width < 500px) { 
+        section {
+                padding: 10px 20px;
+                flex-direction: column;  
+        }
+
+        div.image, div.text{
+                width: 100%;
+                align-items: center;
+        }
+
+    }
+</style>

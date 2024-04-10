@@ -1,13 +1,64 @@
 ---
-
+import Button from "./Button.astro";
 ---
 
 <section>
-    
-        <h2></h2>
+        <div class="layout">
+                <div class="image">
+                        <img src="/img/mobile1.png"/>
+                </div>
+                <div class="text">
+                        <h2>Get more candidates through the door faster</h2>
+                        <p>Checkr gives candidates transparency into their records, accurate ETAs and the oportunity to gice context around rcords when necessary, so that you can accelerate the hiring process and ensure a positive candidate experience.</p>
+                        <Button
+                                content="Learn More"
+                                width="160px"
+                                backgroundColor="var(--azulFuerte)"
+                        />
+                </div>
+        </div>
     
 </section>
 
 <style>
-        
+    section {
+        padding: 50px 100px;
+        background-color: var(--rosaPrincipal);
+        border: solid 3px #000;
+}
+
+    
+
+    p {
+        padding-bottom: 50px;
+    }
+    
+    div.image{
+        width: 40%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        /* height: fit-content; */
+    }
+    div.text{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: left;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    @media (width < 500px) { 
+        section {
+                padding: 10px 20px;
+                flex-direction: column-reverse;  
+        }
+
+        div.image, div.text{
+                width: 100%;
+                align-items: center;
+        }
+    }
 </style>

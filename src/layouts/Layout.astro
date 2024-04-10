@@ -1,8 +1,8 @@
 ---
-import '@fontsource-variable/space-grotesk';
+import "@fontsource-variable/space-grotesk";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,36 +10,82 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--mainFont: 'Space Grotesk Variable', sans-serif;
-		--verdePrincipal: #62C0A5;
-		--verdeAcento: #7cc9b3;
-		--rosaPrincipal: #f8bed4;
-		--rosaAcento: #f9cadc;
-		--azulPrincipal: #b7e4e8;
-		--azulAcento: #bde6e9;
-		--azulContenedor: #CFEFF1;
-		--azulContenedorBorde: #E0F4F6;
-		
-	}
-	p {
-		color: #000;
-		font-size:20px;
-	}
+  :root {
+    --mainFont: "Space Grotesk Variable", sans-serif;
+    --verdePrincipal: #62c0a5;
+    --verdeAcento: #7cc9b3;
+    --rosaPrincipal: #f8bed4;
+    --rosaAcento: #f9cadc;
+    --azulPrincipal: #b7e4e8;
+    --azulAcento: #bde6e9;
+    --azulContenedor: #cfeff1;
+    --azulContenedorBorde: #e0f4f6;
+	--azulFuerte: #65c7d0;
+  }
 
-	h1 {color: #000;}
-	
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  p {
+    color: #000;
+    font-size: 20px;
+  }
+
+
+  h1,
+  h2 {
+    color: #000;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    margin: 1em 0;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .layout {
+        display: flex;
+        flex-direction: row;
+		margin: 0 auto;
+        max-width: 1600px;
+        /* background-color: blueviolet; */
+    }
+
+  @media (width < 500px) { 
+
+        
+		h1 {
+                font-size: 42px;
+        }
+
+		h2 {
+                font-size: 36px;
+        }
+
+        p{
+                font-size: 18px;
+        }
+
+    }
 </style>

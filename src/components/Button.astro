@@ -1,19 +1,33 @@
 ---
-const {content, width, backgroundColor, fontWeight} = Astro.props;
+interface Props {
+    id?: string;
+    className?: string;
+    content: string;
+    width?: string;
+    height?: string;
+    backgroundColor?: string;
+    fontWeight?: string;
+}
+
+const {id, className, content, width, height, backgroundColor, fontWeight } = Astro.props;
 ---
 
-<button style={{ 
+<button 
+    id={ id || null}
+    class={ className || null}
+    style={{ 
     width: width || 'auto',
+    height: height || '45px',
     backgroundColor: backgroundColor || 'var(--verdePrincipal)',
-    fontWeight: fontWeight || 'bold'
+    fontWeight: fontWeight || 'bold',
 }}>
+
     {content}
 </button>
 
 <style >
     button {
         color: #000;
-        height: 45px;
         padding: 0 20px;
         font-size: 14px;
         border: solid 1px #000;

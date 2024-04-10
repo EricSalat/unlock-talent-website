@@ -21,7 +21,7 @@ import Collaborators from "./Collaborators.astro"
                 backgroundColor="var(--rosaPrincipal)">
             </Button>
         </div>
-        <div id="collaborators">
+        <!-- <div id="collaborators">
             <Collaborators image="logo-netflix" alt="Netflix" />
             <Collaborators image="logo-uber" alt="Uber" />
             <Collaborators image="logo-globant" alt="Globant" />
@@ -29,27 +29,21 @@ import Collaborators from "./Collaborators.astro"
             <Collaborators image="logo-wallapop" alt="Wallapop" />
             <Collaborators image="logo-accenture" alt="Accenture" />
             
-        </div>
+        </div> -->
     </div>
     <div id="image-part">
-        <!-- <img src="/public/hero-1.png" alt=""> -->
+        <img src="/hero-1.png" alt="">
     </div>
 
 </section>
 
 <style>
-    h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: left;
-		margin: 1em 0;
-		font-size: 64px;
-	}
 
-	#hero {
+
+	section {
+        background-color: #fff;
+        padding: 50px 100px;
 		display: flex;
-
 	}
 
 	#text-part {
@@ -70,9 +64,31 @@ import Collaborators from "./Collaborators.astro"
     }
 
     #collaborators {
+        width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         width: fit-content;
+        /* align-items: stretch; */
+    }
+
+    @media (width < 768px) { 
+        section {
+                padding: 10px 20px;
+                flex-direction: column-reverse;  
+        }
+
+        #text-part, #image-part{
+                width: 100%;
+                align-items: center;
+                position: relative;
+        }
+
+        #collaborators {
+        grid-template-columns: 1fr 1fr;
+       justify-self: center;
+    }
+
+        
     }
 </style>

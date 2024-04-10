@@ -1,0 +1,67 @@
+---
+import Button from "../Button.astro";
+// import { Icon } from 'astro-icon/components';
+
+
+---
+
+<nav 
+    
+>
+     <!--Cruz de cerrar menú -->
+    <svg id="cross-icon" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+    </svg>
+    <ul>
+        <li><a href="">Products</a></li>
+        <li><a href="">Use Cases</a></li>
+        <li><a href="">Developers</a></li>
+        <li><a href="">Resources</a></li>
+      </ul>
+  
+      <span class="header-button">
+        <Button id="header-button" content="Start For Free" height="35px" fontWeight="500" />
+      </span>
+</nav>
+
+<style>
+    nav {
+        font-family: var(--mainFont);
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        z-index: 3;
+        
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        padding-top:50px;
+    }
+
+    .header-button {
+        padding: 50px 0;
+    }
+
+    svg {
+        width: auto;
+        position: absolute;
+        top:0;
+        right: 0;
+        margin: 16px;
+    }
+
+
+</style>
