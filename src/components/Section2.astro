@@ -35,14 +35,14 @@ import Button from "./Button.astro";
         padding-bottom: 50px;
     }
     
-    div.image{
+    .image{
         width: 60%;
         display: flex;
         justify-content: center; 
         align-items: center;
         /* height: fit-content; */
     }
-    div.text{
+    .text{
         width: 40%;
         display: flex;
         flex-direction: column;
@@ -52,15 +52,24 @@ import Button from "./Button.astro";
         padding-bottom: 50px;
     }
 
+    
+
     @media (width < 500px) { 
         section {
                 padding: 10px 20px;
-                flex-direction: column;  
+                flex-direction: column; 
+                border-right: none;
+                border-left: none; 
         }
+
 
         div.image, div.text{
                 width: 100%;
                 align-items: center;
+        }
+
+        .layout {
+            flex-direction: column;    
         }
 
     }

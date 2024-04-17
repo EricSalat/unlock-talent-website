@@ -65,14 +65,14 @@ const { title } = Astro.props;
   }
 
   .layout {
-        display: flex;
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
 		margin: 0 auto;
-        max-width: 1600px;
-        /* background-color: blueviolet; */
-    }
+    max-width: 1600px;
+    /* background-color: blueviolet; */
+  }
 
-  @media (width < 500px) { 
+  @media (width < 768px) { 
 
         
 		h1 {
@@ -83,9 +83,15 @@ const { title } = Astro.props;
                 font-size: 36px;
         }
 
+    h3 {
+      font-size:
+    }
+
         p{
                 font-size: 18px;
         }
+
+        
 
     }
 </style>

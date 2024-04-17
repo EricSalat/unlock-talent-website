@@ -1,0 +1,74 @@
+---
+import Card from "../components/Card.astro";
+---
+
+<section>
+  <h2>Built for scale</h2>
+  <p>
+    Whether you're just getting started or onboarding thousands,<br /> Checkr makes
+    it easy for you to quickly scale your hiring.
+  </p>
+  <div class="cards-section">
+    <Card
+      title="Trusted speed and reliability"
+      body="Run over 1.5 million reports a month with no impact."
+      dropShadowColor="var(--azulFuerte)"
+    />
+    <Card
+      title="Powerful ecosystem"
+      body="Access to 100+ partners and our propietary data network"
+      dropShadowColor="var(--verdePrincipal)"
+    />
+    <Card
+      title="Global coverage"
+      body="Background checks in 200+ countries and territories"
+      dropShadowColor="var(--rosaPrincipal)"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 50px 100px;
+    background-color: #fff;
+    border: solid 3px #000;
+    border-top: none;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    padding-bottom: 50px;
+    /* font-size: 12px; */
+  }
+
+  .cards-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 50px;
+    /* background-color: aqua; */
+    
+   
+  }
+
+  @media screen and (max-width: 1200px) {
+    .cards-section {
+      flex-direction:row;      flex-wrap: wrap;
+    }
+  }
+
+  @media (width < 600px) { 
+    section {
+                padding: 10px 20px;
+                border-right: none;
+                border-left: none; 
+        }
+	}
+	
+</style>
