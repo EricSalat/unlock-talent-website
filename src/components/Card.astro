@@ -38,7 +38,6 @@ const { title, body, dropShadowColor } = Astro.props;
 
 <style>
 	div {
-		
 		min-width: 200px;
 		width: 450px;
 		min-height: 550px;
@@ -81,18 +80,23 @@ const { title, body, dropShadowColor } = Astro.props;
 
 	@media (width < 600px) { 
 		div {
-			min-height: 450px;
+			min-height: 320px;
 			padding: 0 40px;
+			margin: 0 15px;
 		}
 		h3 {
-			font-size: 30px;
+			font-size: 26px;
+			padding-bottom:18px;
+			padding-top:25px;
+			
 		}
 		p {
 		font-size: 16px;
+		font-weight: normal;
 		}
 		svg {
-		height: 100px;
-		width: 100px;
+		height: 90px;
+		width: 90px;
 	}
 	}
 </style>

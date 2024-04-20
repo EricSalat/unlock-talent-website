@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import RoundArrowDown from "../icons/RoundArrowDown.astro";
 
 const { header, body, content, color, backgroundColor } = Astro.props;
 ---
@@ -8,24 +9,39 @@ const { header, body, content, color, backgroundColor } = Astro.props;
   <div class="accordion-item">
     <div
       class="accordion-header"
-      style={{ 
+      onclick="toggleAccordion(this)"
+      style={{
         backgroundColor: backgroundColor || "#000",
-    }}
+      }}
     >
-      <p style={{ 
-        color: color || "#fff",
-    }}>{header}</p>
+      <span class="round-arrow">
+        <RoundArrowDown strokeColor="#fff" />
+      </span>
+      <p
+        style={{
+          color: color || "#fff",
+        }}
+      >
+        {header}
+      </p>
     </div>
     <div class="accordion-content">
       <p>{body}</p>
       <div>
         <Button content={content} />
-     </div>
+      </div>
     </div>
   </div>
 </div>
 
 <style>
+  p {
+    font-size: 22px;
+  }
+
+  .accordion-content p{
+    font-size: 18px;
+  }
 
   .accordion {
     border: 2px solid #000;
@@ -33,17 +49,20 @@ const { header, body, content, color, backgroundColor } = Astro.props;
     margin-bottom: 20px;
     overflow: hidden;
     width: 100%;
-}
+  }
 
-
-.accordion-header {
+  .accordion-header {
     font-weight: 700;
     letter-spacing: 3px;
     background-color: #f4f4f4;
     padding: 15px 10px;
     cursor: pointer;
-    /* width:max-content; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: blue;
+    gap: 12px;
+
   }
 
   .accordion-content {
@@ -51,15 +70,22 @@ const { header, body, content, color, backgroundColor } = Astro.props;
     padding: 20px;
     display: none;
     background-color: #fff;
-    /* display: flex; */
   }
 
   .accordion-content p {
     padding-bottom: 20px;
   }
 
-  /* Estilos para mostrar el contenido activo */
+
   .accordion-item.active .accordion-content {
     display: block;
   }
+
+  .round-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+}
 </style>

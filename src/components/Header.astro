@@ -1,18 +1,16 @@
 ---
-import HeaderDesktop from "./HeaderDesktop.astro";
-import MobileMenu from "./Mobile/MobileMenu.astro";
+
 ---
 
-<>
-    <HeaderDesktop id="header"></Header>
-    <div id="mobile-menu">
-        <MobileMenu client:visible/>
-    </div>
-</>
-
-<style>
-    #mobile-menu {
-		display: none;
-	}
-</style>
-
+<header class="flex">
+    <nav class="flex justify-center items-center py-4" >
+        <p>Logo</p>
+        <ul class="flex space-x-4">
+            <li>Products</li>
+            <li>Use Cases</li>
+            <li>Developers</li>
+            <li>Resources</li>
+        </ul>
+        <button>Start For Free</button>
+    </nav>
+</header>

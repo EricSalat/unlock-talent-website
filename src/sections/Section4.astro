@@ -1,6 +1,7 @@
 ---
-import Accordion from "./Accordion.astro";
-import AccordionTest from "./AccordionTest.astro";
+import Accordion from "../components/Accordion.astro";
+import AccordionTest from "../components/AccordionTest.astro";
+import TabletMockup from "../icons/TabletMockup.astro";
 ---
 
 <section>
@@ -8,10 +9,12 @@ import AccordionTest from "./AccordionTest.astro";
         <div class="text">
             <h2>It's easy to integrate with Checkr</h2>
             <p>Plug Checkr right into your hiring workflow</p>
-            <AccordionTest />
+            <span>
+                <AccordionTest />
+            </span>
         </div>
         <div class="image">
-                <img src="/img/laptop.png"/>
+                <TabletMockup />
         </div>
     </div>
     
@@ -21,7 +24,7 @@ import AccordionTest from "./AccordionTest.astro";
     section {
         padding: 50px 100px;
         background-color: var(--verdePrincipal);
-        display: flex;
+        /* display: flex; */
         flex-direction: row;
         border: solid 3px #000;
         border-top: none;
@@ -33,11 +36,16 @@ import AccordionTest from "./AccordionTest.astro";
     }
     
     .image{
-        width: 60%;
+        width: 50%;
         display: flex;
         justify-content: center; 
         align-items: center;
-        /* height: fit-content; */
+        /* background-color: aqua; */
+        
+    }
+
+    .image svg {
+
     }
     .text{
         width: 50%;
@@ -47,19 +55,29 @@ import AccordionTest from "./AccordionTest.astro";
         align-items: left;
         justify-content: center;
         padding-bottom: 50px;
+        /* background-color: aquamarine */
     }
 
     .layout {
-        gap: 50px;
+        /* gap: 50px; */
+        /* height: 2000px; */
     }
+
+    span {
+        width: 80%
+    }
+
+    /* svg {
+        width: 1000px;
+    } */
     
 
     @media (width < 700px) { 
         section {
                 padding: 10px 20px;
                 flex-direction: column; 
-                border-right: none;
-                border-left: none; 
+                /* border-right: none;
+                border-left: none;  */
         }
 
 
@@ -71,6 +89,12 @@ import AccordionTest from "./AccordionTest.astro";
         .layout {
             flex-direction: column;    
         }
+
+        .text {
+            display: initial;
+        }
+
+
 
     }
 </style>

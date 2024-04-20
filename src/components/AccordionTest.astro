@@ -35,14 +35,20 @@ import AccordionItem from "./AccordionItem.astro";
             // Cerrar todos los elementos
             document.querySelectorAll('.accordion-item').forEach(item => {
                 item.classList.remove('active');
+                item.querySelector('.round-arrow').classList.remove('rotate');
+
             });
 
             // Si el elemento no estaba activo, lo activamos
             if (!isActive) {
                 accordionItem.classList.add('active');
+                this.querySelector('.round-arrow').classList.add('rotate');
+
             }
+          
         });
     });
+
 });
 
 </script>

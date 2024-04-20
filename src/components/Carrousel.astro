@@ -1,0 +1,72 @@
+---
+import RoundArrowLeft from "@/icons/RoundArrowLeft.astro";
+import RoundArrowRight from "@/icons/RoundArrowRight.astro";
+import AngleLeft from "@/icons/AngleLeft.astro";
+import AngleRight from "@/icons/AngleRight.astro";
+---
+
+<div class="carrousel">
+
+
+<!-- <div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia ut vitae natus eaque unde fugit incidunt molestiae rem culpa, recusandae repudiandae itaque beatae dicta, autem iure inventore pariatur dolor. Eaque.</p>
+    <p class="carrousel-name">Sean Miller</p>
+    <p class="carrousel-role">Vice President of Operations, Angi</p>
+</div> -->
+<div class="button-container">
+    <span class="angle-left">
+        <AngleLeft />
+    </span>
+    <span class="angle-right">
+        <AngleRight />
+    </span>
+</div>
+</div>
+
+<style>
+    .carrousel {
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 20px 50px;
+        width: 80%;
+        posiiton: absolute;
+        display:flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+
+    .carrousel-name {
+        font-weight: bold;
+        color: inherit;
+    }
+    .carrousel-role {
+        font-weight: bold;
+        color: var(--azulFuerte);
+    }
+
+    .angle-left, .angle-right {
+        background-color: var(--rosaPrincipal);
+        height:fit-content;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: var(--border);
+    }
+
+    .button-container {
+        position: absolute;
+    }
+
+    .angle-left {
+        float: left;
+    }
+    .angle-left {
+        float: right;
+    }
+
+</style>

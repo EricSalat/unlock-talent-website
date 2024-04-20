@@ -1,0 +1,41 @@
+---
+import Carrousel from "@/components/Carrousel.astro"
+---
+
+<section>
+  <div class="layout">
+      <h2>
+        Tens of thousands of customers are building a fairer future with Checkr
+      </h2>
+      <Carrousel />
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 50px 100px;
+    background-color: #fff;
+    border: solid 3px #000;
+    border-top: none;
+    text-align: center;
+    margin: 0 auto;
+    
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (width < 500px) { 
+    section {
+        padding: 10px 20px;
+    }
+  }
+</style>
