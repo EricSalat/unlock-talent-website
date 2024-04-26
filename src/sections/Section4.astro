@@ -14,7 +14,8 @@ import TabletMockup from "../icons/TabletMockup.astro";
             </span>
         </div>
         <div class="image">
-                <TabletMockup />
+                <!-- <TabletMockup /> -->
+                <img src="/tablet_svg.svg">
         </div>
     </div>
     
@@ -28,7 +29,6 @@ import TabletMockup from "../icons/TabletMockup.astro";
         flex-direction: row;
         border: solid 3px #000;
         border-top: none;
-
     }
 
     p {
@@ -39,14 +39,9 @@ import TabletMockup from "../icons/TabletMockup.astro";
         width: 50%;
         display: flex;
         justify-content: center; 
-        align-items: center;
-        /* background-color: aqua; */
-        
+        /* background-color: blueviolet; */
     }
 
-    .image svg {
-
-    }
     .text{
         width: 50%;
         display: flex;
@@ -55,12 +50,6 @@ import TabletMockup from "../icons/TabletMockup.astro";
         align-items: left;
         justify-content: center;
         padding-bottom: 50px;
-        /* background-color: aquamarine */
-    }
-
-    .layout {
-        /* gap: 50px; */
-        /* height: 2000px; */
     }
 
     span {
@@ -83,7 +72,6 @@ import TabletMockup from "../icons/TabletMockup.astro";
 
         div.image, div.text{
                 width: 100%;
-                align-items: center;
         }
 
         .layout {
@@ -92,8 +80,12 @@ import TabletMockup from "../icons/TabletMockup.astro";
 
         .text {
             display: initial;
+            padding-bottom: 0;
         }
 
+        .image {
+            padding-top:40px;
+        }
 
 
     }

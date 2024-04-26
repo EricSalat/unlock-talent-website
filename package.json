@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/space-grotesk": "^5.0.17",
+    "@formkit/auto-animate": "^0.8.2",
     "astro": "^4.5.12",
     "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.3"

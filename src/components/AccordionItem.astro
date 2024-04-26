@@ -34,6 +34,17 @@ const { header, body, content, color, backgroundColor } = Astro.props;
   </div>
 </div>
 
+
+<script>
+import autoAnimate from "@formkit/auto-animate";
+const accordions = document.querySelectorAll('.accordion-header');
+
+accordions.forEach(accordion => {
+    autoAnimate(accordion as HTMLElement); // Aplica autoAnimate a cada elemento de la colección
+});
+
+</script>
+
 <style>
   p {
     font-size: 22px;
@@ -70,6 +81,7 @@ const { header, body, content, color, backgroundColor } = Astro.props;
     padding: 20px;
     display: none;
     background-color: #fff;
+    /* transition: transform all .35s; */
   }
 
   .accordion-content p {
@@ -89,3 +101,5 @@ const { header, body, content, color, backgroundColor } = Astro.props;
     transform: rotate(-180deg);
 }
 </style>
+
+
